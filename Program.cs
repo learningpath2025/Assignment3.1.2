@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Console.WriteLine($"{IfYearIsLeap(GetYear())}");
+            //Console.WriteLine($"{IsLeapYear(GetYear())}");
         }
 
         public static int GetYear()
@@ -47,5 +48,7 @@
                 return false; // Not divisible by 4, so it's not a leap year
             }
         }
+
+        static bool IsLeapYear(int year) => (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); // Using expression-bodied member for conciseness
     }
 }
